@@ -1,8 +1,19 @@
 #!/usr/bin/python
-from datagod.datagod import *
+from datagod import *
 
 def main():
-	testcase = DataGodFactory()
-	testcase.setStep(1).setType("poly").setLowRange(0).setHighRange(100).setTermList([10000, 0, 2]).build().draw()
+	testcase = DataGodBuilder()
+	# testcase.setType(GraphType.getPolynomialType())\
+	# .setTermList([0, 1])\
+	# .build()\
+	# .draw()
+
+	testcase.setType(GraphType.getLogType())\
+	.setLogTerm(1)\
+	.setBase(11)\
+	.setIntercept(0)\
+	.setLowRange(2)\
+	.build()\
+	.draw()
 
 main()
