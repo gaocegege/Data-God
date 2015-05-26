@@ -33,16 +33,24 @@ The module get a input such as a polynomial function. first, the program will fa
 
 Every thing begins with `DataGodBuilder` class, so you need to get a DataGodBuilder, and there are some common config:
 
-* `setLowRange(x1: Int)` and `setHighRange(x2: Int)` are used to set the domain of the graph, [x1, x2]. default is [0, 10]
+* `setLowRange(x1: float)` and `setHighRange(x2: float)` are used to set the domain of the graph, [x1, x2]. default is [0, 10]
 
 ## Polynomial
 
+A polynomial in a single indeterminate can be written in the form: `p[0] * 1 + p[1] * x + p[2] * x ** 2 + ... + p[n] * x ** n`, so if get the list of terms p, then can get the polynomial.
+
 * `setType(GraphType.getPolynomialType())` is needed to tell the builder that it need to build a graph about Polynomial.
-* `setTermList(termlist: Int List)` is needed to tell the builder the coefficients,  in order of increasing degree, i.e., [1, 2, 3] give 1 + 2*x + 3*x**2.
+* `setTermList(termlist: float List)` is needed to tell the builder the coefficients,  in order of increasing degree, i.e., [1, 2, 3] give 1 + 2*x + 3*x**2.
 
 ## Logarithm
 
-* ``
+A Logarithm can be written in the form: `term * log(base)[x] + intercept`, so tell me the term, base and intercept, I will know the log functon. 
+
+* `setLogTerm(term: float)`
+* `setBase(base: float)`
+* `setIntercept(intercept: float)`
+
+Notice: 0 in domain is bad.
 
 # Requirements
 
