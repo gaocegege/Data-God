@@ -3,3 +3,5 @@
 *.pypirc
 setup.*
 datagod.egg-info/*
+index.*
+dist/*
