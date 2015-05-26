@@ -1,2 +1,4 @@
 #pyc
 *.pyc
+*.pypirc
+setup.*
