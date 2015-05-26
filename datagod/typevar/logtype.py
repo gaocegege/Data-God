@@ -77,8 +77,6 @@ class LogType(TypeBase):
 		x = self.__removeZero__(x)#remove zero to make sure self.__mathLog__() can work
 		y = self.__removeZero__(y)#remove zero to make sure self.__mathLog__() can work
 		# cheat the data
-		print x
-		print y
 		cheatY = map(lambda yEle: yEle + self.swing * yEle * (2 * random() - 1), y)
 		cheatY = self.__removeZero__(cheatY)
 		# cheat line
