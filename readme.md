@@ -1,11 +1,54 @@
 # Data God
 
-A Open Source Package focused on cheating on data.
+A Open Source program focused on faking data, you can use it when you need some fitting graph, inspired by MCM.
+
+## Example
+
+For example, you give me a function such as `f(x) = x`, the code is:
+
+	from datagod import *
+	def main():
+		testcase = DataGodBuilder()
+		testcase.setType(GraphType.getPolynomialType())\
+		.setTermList([0, 1])\
+		.build()\
+		.draw()
+	main()
+
+The program will return a graph: 
+
+<figure>
+	<img src="./image/example.png" alt="Example" height="500">
+</figure>
+
+The module get a input such as a polynomial function. first, the program will fake some data around the function, and fit a curve using the faked data. So finally, you will get a graph, and some info about the fitting curve. In this case, the info is:
+
+	Info: coff: [-0.03219724  0.99218986]
+	Info: residuals: [ 6.13295169]
+	Info: rank: 2
+	Info: singular_values: [ 1.  1.]
+	Info: rcond: 1.11022302463e-14
+
+# Use
+
+Every thing begins with `DataGodBuilder` class, so you need to get a DataGodBuilder, and there are some common config:
+
+* `setLowRange(x1: Int)` and `setHighRange(x2: Int)` are used to set the domain of the graph, [x1, x2]. default is [0, 10]
+
+## Polynomial
+
+* `setType(GraphType.getPolynomialType())` is needed to tell the builder that it need to build a graph about Polynomial.
+* `setTermList(termlist: Int List)` is needed to tell the builder the coefficients,  in order of increasing degree, i.e., [1, 2, 3] give 1 + 2*x + 3*x**2.
+
+## Logarithm
+
+* ``
 
 # Requirements
 
 1. numpy
 2. matplotlib
+3. scipy
 
 # Tasks
 
