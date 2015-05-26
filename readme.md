@@ -52,6 +52,8 @@ A Logarithm can be written in the form: `term * log(base)[x] + intercept`, so te
 
 Notice: 0 in domain is bad.
 
+## To be continued
+
 # Requirements
 
 1. numpy
