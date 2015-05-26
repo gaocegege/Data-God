@@ -7,8 +7,12 @@ class GraphType(object):
 	"""Type of the graph"""
 	@staticmethod
 	def getDefaultType():
-		return TypeBase()
+		return -1
 
 	@staticmethod
-	def getPolynomialType(termLst):
-		return PolynomialType(termLst)
+	def getPolynomialType():
+		return "poly"
+
+	@staticmethod
+	def getLogType():
+		return "log"
