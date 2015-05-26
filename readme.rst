@@ -22,10 +22,9 @@ For example, you give me a function such as ``f(x) = x``, the code is:
 
 The program will return a graph:
 
-.. image:: example.png
+.. image:: http://github.com/gaocegege/Data-God/raw/master/image/example.png
     :height: 300px
     :alt: example
-    :target: http://github.com/gaocegege/Data-God/raw/master/image/example.png
 
 The module get a input such as a polynomial function. first, the program
 will fake some data around the function, and fit a curve using the faked
