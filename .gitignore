@@ -1,7 +1,7 @@
 #pyc
 *.pyc
 *.pypirc
-setup.*
+setup.cfg
 datagod.egg-info/*
 index.*
 dist/*
