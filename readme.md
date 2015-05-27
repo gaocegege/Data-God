@@ -2,6 +2,10 @@
 
 A Open Source program focused on faking data, you can use it when you need some fitting graph, inspired by MCM.
 
+## Install 
+
+	pip install datagod
+
 ## Example
 
 For example, you give me a function such as `f(x) = x`, the code is:
