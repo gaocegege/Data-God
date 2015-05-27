@@ -5,3 +5,4 @@ setup.*
 datagod.egg-info/*
 index.*
 dist/*
+build/*
